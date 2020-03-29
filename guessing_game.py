@@ -1,7 +1,6 @@
 import random
 import sys
 
-
 def start_game():
     
     print("""
@@ -9,7 +8,6 @@ def start_game():
 Welcome to the number guessing game!
 ---------------------------------------
     """)
-    
     highscore = 1000
     replay = "yes"
     
@@ -20,7 +18,6 @@ Welcome to the number guessing game!
         user_number = 0
         
         while user_number != RANDOM_NUMBER: 
-            print(RANDOM_NUMBER)
             try:
                 user_number = int(input("Pick a number between 1 and 10: "))
                 if user_number > 10 or user_number < 1:
@@ -35,7 +32,6 @@ Welcome to the number guessing game!
             except ValueError as err:
                 print("Oh no! That's not a valid value.")
                 print("({})".format(err))
-                sys.exit(1)
         
         if attempts < highscore:
             highscore = attempts
